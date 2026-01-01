@@ -40,7 +40,6 @@ export function Footer() {
               <li><a href="#features">{t('nav.features')}</a></li>
               <li><a href="#pricing">{t('nav.premium')}</a></li>
               <li><a href="#universities">{t('nav.universities')}</a></li>
-              <li><a href="#waitlist">{t('footer.safety')}</a></li>
             </ul>
           </div>
           <div className="footer-links">

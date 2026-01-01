@@ -31,10 +31,26 @@ body {
   height: 100%;
   z-index: -2;
   pointer-events: none;
-  opacity: 0.06;
-  background-image: url('/brick-pattern.svg');
-  background-repeat: repeat;
-  background-size: 120px 60px;
+  opacity: 0.01;
+  background-color: #5BC0EB;
+  background-image:
+    linear-gradient(to right, #3A9BD9 4px, transparent 4px),
+    linear-gradient(to bottom, #3A9BD9 4px, transparent 4px);
+  background-size: 80px 40px;
+  background-position: 0 0, 40px 20px;
+}
+
+.bg-bricks::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(to right, #3A9BD9 4px, transparent 4px);
+  background-size: 80px 40px;
+  background-position: 40px 20px;
 }
 
 /* Animated Background */
