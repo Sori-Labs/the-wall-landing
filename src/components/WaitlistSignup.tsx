@@ -66,6 +66,14 @@ export function WaitlistSignup() {
 
     setIsSubmitting(true);
 
+    const saveToLocalStorage = () => {
+      const existingEmails = JSON.parse(localStorage.getItem('waitlist') || '[]');
+      if (!existingEmails.includes(email)) {
+        existingEmails.push(email);
+        localStorage.setItem('waitlist', JSON.stringify(existingEmails));
+      }
+    };
+
     try {
       const response = await fetch('/api/waitlist', {
         method: 'POST',
@@ -75,40 +83,27 @@ export function WaitlistSignup() {
 
       // Check if we got a valid JSON response (Vercel API)
       const contentType = response.headers.get('content-type');
-      if (contentType?.includes('application/json')) {
+      if (response.ok && contentType?.includes('application/json')) {
         const result = await response.json();
         if (!result.ok) {
           throw new Error(result.error || 'Submission failed');
         }
         console.log('Waitlist submission:', result);
       } else {
-        // Fallback for local dev without Vercel - use localStorage
+        // API not available - use localStorage fallback
         console.warn('API not available, using localStorage fallback');
-        const existingEmails = JSON.parse(localStorage.getItem('waitlist') || '[]');
-        if (!existingEmails.includes(email)) {
-          existingEmails.push(email);
-          localStorage.setItem('waitlist', JSON.stringify(existingEmails));
-        }
+        saveToLocalStorage();
       }
 
       setIsSubmitted(true);
       setEmail('');
     } catch (err) {
       console.error('Waitlist submission error:', err);
-      // Fallback to localStorage on any error (for local dev)
-      if (import.meta.env.DEV) {
-        console.warn('Using localStorage fallback');
-        const existingEmails = JSON.parse(localStorage.getItem('waitlist') || '[]');
-        if (!existingEmails.includes(email)) {
-          existingEmails.push(email);
-          localStorage.setItem('waitlist', JSON.stringify(existingEmails));
-        }
-        setIsSubmitted(true);
-        setEmail('');
-      } else {
-        const errorMsg = err instanceof Error ? err.message : 'Unknown error';
-        setError(`Failed to join waitlist: ${errorMsg}`);
-      }
+      // Fallback to localStorage on any error
+      console.warn('Using localStorage fallback due to error');
+      saveToLocalStorage();
+      setIsSubmitted(true);
+      setEmail('');
     } finally {
       setIsSubmitting(false);
     }
