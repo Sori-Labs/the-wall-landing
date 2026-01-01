@@ -15,6 +15,7 @@ export function Referral() {
       <div className="referral-box">
         <h3>{t('referral.title')}</h3>
         <p>{t('referral.subtitle')}</p>
+        <p className="coming-soon-note">Coming soon - not yet available</p>
         <div className="referral-rewards">
           <div className="reward">
             <div className="icon">👑</div>
