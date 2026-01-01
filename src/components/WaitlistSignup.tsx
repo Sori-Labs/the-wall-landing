@@ -66,14 +66,6 @@ export function WaitlistSignup() {
 
     setIsSubmitting(true);
 
-    const saveToLocalStorage = () => {
-      const existingEmails = JSON.parse(localStorage.getItem('waitlist') || '[]');
-      if (!existingEmails.includes(email)) {
-        existingEmails.push(email);
-        localStorage.setItem('waitlist', JSON.stringify(existingEmails));
-      }
-    };
-
     try {
       const response = await fetch('/api/waitlist', {
         method: 'POST',
@@ -81,29 +73,20 @@ export function WaitlistSignup() {
         body: JSON.stringify({ email }),
       });
 
-      // Check if we got a valid JSON response (Vercel API)
-      const contentType = response.headers.get('content-type');
-      if (response.ok && contentType?.includes('application/json')) {
-        const result = await response.json();
-        if (!result.ok) {
-          throw new Error(result.error || 'Submission failed');
-        }
-        console.log('Waitlist submission:', result);
-      } else {
-        // API not available - use localStorage fallback
-        console.warn('API not available, using localStorage fallback');
-        saveToLocalStorage();
+      console.log('Response status:', response.status);
+      const result = await response.json();
+      console.log('Response body:', result);
+
+      if (!result.ok) {
+        throw new Error(result.error || 'Submission failed');
       }
 
       setIsSubmitted(true);
       setEmail('');
     } catch (err) {
       console.error('Waitlist submission error:', err);
-      // Fallback to localStorage on any error
-      console.warn('Using localStorage fallback due to error');
-      saveToLocalStorage();
-      setIsSubmitted(true);
-      setEmail('');
+      const errorMsg = err instanceof Error ? err.message : 'Unknown error';
+      setError(`Failed to join waitlist: ${errorMsg}`);
     } finally {
       setIsSubmitting(false);
     }
