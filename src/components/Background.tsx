@@ -1,9 +1,12 @@
 export function Background() {
   return (
-    <div className="bg-blobs">
-      <div className="blob blob-1"></div>
-      <div className="blob blob-2"></div>
-      <div className="blob blob-3"></div>
-    </div>
+    <>
+      <div className="bg-bricks"></div>
+      <div className="bg-blobs">
+        <div className="blob blob-1"></div>
+        <div className="blob blob-2"></div>
+        <div className="blob blob-3"></div>
+      </div>
+    </>
   );
 }
