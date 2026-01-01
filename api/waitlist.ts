@@ -12,7 +12,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   const email = String(req.body?.email || "").trim().toLowerCase();
-  const school = String(req.body?.school || "thewall-landing").trim();
 
   if (!email.includes("@")) {
     return res.status(400).json({ ok: false, error: "Invalid email" });
@@ -22,12 +21,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const upstream = await fetch(ENDPOINT, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        email,
-        school,
-        source: "thewall-landing",
-        userAgent: req.headers["user-agent"] || "",
-      }),
+      body: JSON.stringify({ email }),
     });
 
     const text = await upstream.text();
