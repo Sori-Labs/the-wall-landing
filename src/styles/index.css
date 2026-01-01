@@ -31,46 +31,10 @@ body {
   height: 100%;
   z-index: -2;
   pointer-events: none;
-  opacity: 0.04;
-  background-color: transparent;
-  background-image:
-    /* Horizontal mortar lines */
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 28px,
-      #5BC0EB 28px,
-      #5BC0EB 32px
-    ),
-    /* Vertical mortar lines - row 1 pattern */
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 76px,
-      #5BC0EB 76px,
-      #5BC0EB 80px
-    );
-  background-size: 80px 64px;
-}
-
-.bg-bricks::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image:
-    /* Offset vertical lines for staggered effect */
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 76px,
-      #5BC0EB 76px,
-      #5BC0EB 80px
-    );
-  background-size: 80px 64px;
-  background-position: 40px 32px;
+  opacity: 0.06;
+  background-image: url('/brick-pattern.svg');
+  background-repeat: repeat;
+  background-size: 120px 60px;
 }
 
 /* Animated Background */
