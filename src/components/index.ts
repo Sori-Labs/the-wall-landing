@@ -1,0 +1,12 @@
+export { Background } from './Background';
+export { Navbar } from './Navbar';
+export { Hero } from './Hero';
+export { WaitlistSignup } from './WaitlistSignup';
+export { Features } from './Features';
+export { Competition } from './Competition';
+export { OGPromo } from './OGPromo';
+export { Universities } from './Universities';
+export { GlobalStats } from './GlobalStats';
+export { Referral } from './Referral';
+export { CTA } from './CTA';
+export { Footer } from './Footer';
