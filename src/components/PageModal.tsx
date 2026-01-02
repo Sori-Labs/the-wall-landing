@@ -224,21 +224,24 @@ export function AboutContent() {
       </p>
 
       <h3>Our Team</h3>
+      <p>
+        We're a global team of students and builders spanning the United States, South Korea, and Hong Kong — united by a shared belief that campus communities deserve better ways to connect.
+      </p>
       <div className="team-grid">
         <div className="team-member">
-          <div className="team-avatar">🚀</div>
-          <h4>Founder</h4>
-          <p>Building the future of campus social</p>
+          <div className="team-avatar">🇺🇸</div>
+          <h4>United States</h4>
+          <p className="team-initials">K.S. · J.C. · M.R.</p>
         </div>
         <div className="team-member">
-          <div className="team-avatar">💻</div>
-          <h4>Engineering</h4>
-          <p>Making it work seamlessly</p>
+          <div className="team-avatar">🇰🇷</div>
+          <h4>South Korea</h4>
+          <p className="team-initials">J.H.P. · S.Y.L. · H.J.K.</p>
         </div>
         <div className="team-member">
-          <div className="team-avatar">🎨</div>
-          <h4>Design</h4>
-          <p>Creating delightful experiences</p>
+          <div className="team-avatar">🇭🇰</div>
+          <h4>Hong Kong</h4>
+          <p className="team-initials">D.W. · E.C.</p>
         </div>
       </div>
 

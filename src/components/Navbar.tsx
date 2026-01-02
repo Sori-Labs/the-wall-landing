@@ -19,7 +19,7 @@ export function Navbar() {
       <div className="logo">The Wall <span>다왈</span></div>
       <ul className="nav-links">
         <li><a href="#features" onClick={(e) => { e.preventDefault(); scrollToSection('features'); }}>{t('nav.features')}</a></li>
-        <li><a href="#pricing" onClick={(e) => { e.preventDefault(); scrollToSection('pricing'); }}>{t('nav.premium')}</a></li>
+        <li><a href="#community" onClick={(e) => { e.preventDefault(); scrollToSection('community'); }}>{t('nav.community')}</a></li>
         <li><a href="#universities" onClick={(e) => { e.preventDefault(); scrollToSection('universities'); }}>{t('nav.universities')}</a></li>
       </ul>
       <div className="nav-right">

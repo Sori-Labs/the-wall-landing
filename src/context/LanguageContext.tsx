@@ -12,7 +12,7 @@ const translations: Record<Language, Record<string, string>> = {
   en: {
     // Navbar
     'nav.features': 'Features',
-    'nav.premium': 'Premium',
+    'nav.community': 'Community',
     'nav.universities': 'Universities',
     'nav.joinWaitlist': 'Join Waitlist',
 
@@ -84,6 +84,28 @@ const translations: Record<Language, Record<string, string>> = {
     'og.cta': 'Claim Your OG Status',
     'og.note': 'Only available for waitlist members who join before launch',
 
+    // Ambassador
+    'ambassador.badge': 'Coming Soon',
+    'ambassador.title': 'Become a Wall Ambassador',
+    'ambassador.subtitle': 'The Wall grows campus by campus. Ambassadors help spark the first conversations — and shape what the Wall becomes.',
+    'ambassador.getTitle': 'What Ambassadors get',
+    'ambassador.get1': 'A visible Ambassador badge',
+    'ambassador.get2': 'Early access to new features',
+    'ambassador.get3': 'A private Ambassador feed',
+    'ambassador.get4': 'The ability to start and pin threads',
+    'ambassador.get5': 'A voice in campus-specific themes and rules',
+    'ambassador.get6': 'Your name listed on the Early Builders Wall',
+    'ambassador.doTitle': 'What Ambassadors do',
+    'ambassador.do1': 'Invite trusted peers',
+    'ambassador.do2': 'Start real conversations',
+    'ambassador.do3': 'Help the Wall feel alive early on',
+    'ambassador.howTitle': 'How to become one',
+    'ambassador.how1': 'Join early',
+    'ambassador.how2': 'Be active',
+    'ambassador.how3': 'Help bring others in',
+    'ambassador.note': "Ambassadors aren't moderators. They're builders.",
+    'ambassador.tagline': 'Status is earned. Influence is real.',
+
     // Universities
     'universities.title': 'Launching At Top Universities',
     'universities.subtitle': 'Join students from the best schools around the world',
@@ -118,7 +140,7 @@ const translations: Record<Language, Record<string, string>> = {
   ko: {
     // Navbar
     'nav.features': '기능',
-    'nav.premium': '프리미엄',
+    'nav.community': '커뮤니티',
     'nav.universities': '대학교',
     'nav.joinWaitlist': '웨이트리스트 신청',
 
@@ -190,6 +212,28 @@ const translations: Record<Language, Record<string, string>> = {
     'og.cta': 'OG 자격 신청하기',
     'og.note': '출시 전 웨이트리스트 신청자에게만 제공',
 
+    // Ambassador
+    'ambassador.badge': '준비 중',
+    'ambassador.title': 'Wall 앰배서더가 되세요',
+    'ambassador.subtitle': 'The Wall은 캠퍼스별로 성장합니다. 앰배서더는 첫 대화를 시작하고 — Wall이 어떻게 될지 만들어 갑니다.',
+    'ambassador.getTitle': '앰배서더가 받는 것',
+    'ambassador.get1': '눈에 띄는 앰배서더 배지',
+    'ambassador.get2': '새 기능 우선 접근',
+    'ambassador.get3': '비공개 앰배서더 피드',
+    'ambassador.get4': '스레드 시작 및 고정 권한',
+    'ambassador.get5': '캠퍼스별 테마와 규칙에 대한 발언권',
+    'ambassador.get6': 'Early Builders Wall에 이름 등재',
+    'ambassador.doTitle': '앰배서더가 하는 일',
+    'ambassador.do1': '신뢰할 수 있는 친구 초대',
+    'ambassador.do2': '진정한 대화 시작',
+    'ambassador.do3': '초기 Wall을 활기차게 만들기',
+    'ambassador.howTitle': '앰배서더가 되는 방법',
+    'ambassador.how1': '일찍 가입하기',
+    'ambassador.how2': '활발하게 활동하기',
+    'ambassador.how3': '다른 사람들 데려오기',
+    'ambassador.note': '앰배서더는 관리자가 아닙니다. 그들은 빌더입니다.',
+    'ambassador.tagline': '지위는 얻는 것입니다. 영향력은 진짜입니다.',
+
     // Universities
     'universities.title': '최고의 대학에서 런칭',
     'universities.subtitle': '전 세계 최고의 학교 학생들과 함께하세요',
@@ -224,7 +268,7 @@ const translations: Record<Language, Record<string, string>> = {
   zh: {
     // Navbar
     'nav.features': '功能',
-    'nav.premium': '高级版',
+    'nav.community': '社区',
     'nav.universities': '大学',
     'nav.joinWaitlist': '加入等候名单',
 
@@ -295,6 +339,28 @@ const translations: Record<Language, Record<string, string>> = {
     'og.perk6': '优先体验新功能',
     'og.cta': '领取 OG 身份',
     'og.note': '仅限上线前加入等候名单的用户',
+
+    // Ambassador
+    'ambassador.badge': '即将推出',
+    'ambassador.title': '成为墙大使',
+    'ambassador.subtitle': 'The Wall 逐个校园发展。大使帮助点燃第一批对话 — 并塑造墙的未来。',
+    'ambassador.getTitle': '大使获得什么',
+    'ambassador.get1': '显眼的大使徽章',
+    'ambassador.get2': '优先体验新功能',
+    'ambassador.get3': '私密大使动态',
+    'ambassador.get4': '发起和置顶帖子的权限',
+    'ambassador.get5': '参与校园主题和规则制定',
+    'ambassador.get6': '在 Early Builders Wall 上留名',
+    'ambassador.doTitle': '大使做什么',
+    'ambassador.do1': '邀请值得信赖的朋友',
+    'ambassador.do2': '发起真实对话',
+    'ambassador.do3': '帮助早期的墙充满活力',
+    'ambassador.howTitle': '如何成为大使',
+    'ambassador.how1': '尽早加入',
+    'ambassador.how2': '积极活跃',
+    'ambassador.how3': '带动他人加入',
+    'ambassador.note': '大使不是管理员。他们是建设者。',
+    'ambassador.tagline': '地位靠争取。影响力是真实的。',
 
     // Universities
     'universities.title': '首批上线的顶尖大学',
