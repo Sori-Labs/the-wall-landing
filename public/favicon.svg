@@ -1,28 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#5BC0EB"/>
-      <stop offset="100%" style="stop-color:#3A9BD9"/>
+    <linearGradient id="brick1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#C0392B"/>
+      <stop offset="100%" style="stop-color:#96281B"/>
+    </linearGradient>
+    <linearGradient id="brick2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#B83227"/>
+      <stop offset="100%" style="stop-color:#8B1E1E"/>
     </linearGradient>
   </defs>
-  <rect width="100" height="100" rx="20" fill="url(#bg)"/>
+  <!-- Mortar background -->
+  <rect width="100" height="100" rx="20" fill="#D5C4A1"/>
   <!-- Row 1 -->
-  <rect x="8" y="12" width="25" height="12" rx="3" fill="white" opacity="0.95"/>
-  <rect x="37" y="12" width="25" height="12" rx="3" fill="white" opacity="0.95"/>
-  <rect x="66" y="12" width="26" height="12" rx="3" fill="white" opacity="0.95"/>
+  <rect x="8" y="12" width="25" height="12" rx="2" fill="url(#brick1)"/>
+  <rect x="37" y="12" width="25" height="12" rx="2" fill="url(#brick2)"/>
+  <rect x="66" y="12" width="26" height="12" rx="2" fill="url(#brick1)"/>
   <!-- Row 2 -->
-  <rect x="8" y="28" width="38" height="12" rx="3" fill="white" opacity="0.95"/>
-  <rect x="50" y="28" width="42" height="12" rx="3" fill="white" opacity="0.95"/>
+  <rect x="8" y="28" width="38" height="12" rx="2" fill="url(#brick2)"/>
+  <rect x="50" y="28" width="42" height="12" rx="2" fill="url(#brick1)"/>
   <!-- Row 3 -->
-  <rect x="8" y="44" width="25" height="12" rx="3" fill="white" opacity="0.95"/>
-  <rect x="37" y="44" width="30" height="12" rx="3" fill="white" opacity="0.95"/>
-  <rect x="71" y="44" width="21" height="12" rx="3" fill="white" opacity="0.95"/>
+  <rect x="8" y="44" width="25" height="12" rx="2" fill="url(#brick1)"/>
+  <rect x="37" y="44" width="30" height="12" rx="2" fill="url(#brick2)"/>
+  <rect x="71" y="44" width="21" height="12" rx="2" fill="url(#brick1)"/>
   <!-- Row 4 -->
-  <rect x="8" y="60" width="35" height="12" rx="3" fill="white" opacity="0.95"/>
-  <rect x="47" y="60" width="20" height="12" rx="3" fill="white" opacity="0.95"/>
-  <rect x="71" y="60" width="21" height="12" rx="3" fill="white" opacity="0.95"/>
+  <rect x="8" y="60" width="35" height="12" rx="2" fill="url(#brick2)"/>
+  <rect x="47" y="60" width="20" height="12" rx="2" fill="url(#brick1)"/>
+  <rect x="71" y="60" width="21" height="12" rx="2" fill="url(#brick2)"/>
   <!-- Row 5 -->
-  <rect x="8" y="76" width="20" height="12" rx="3" fill="white" opacity="0.95"/>
-  <rect x="32" y="76" width="30" height="12" rx="3" fill="white" opacity="0.95"/>
-  <rect x="66" y="76" width="26" height="12" rx="3" fill="white" opacity="0.95"/>
+  <rect x="8" y="76" width="20" height="12" rx="2" fill="url(#brick1)"/>
+  <rect x="32" y="76" width="30" height="12" rx="2" fill="url(#brick2)"/>
+  <rect x="66" y="76" width="26" height="12" rx="2" fill="url(#brick1)"/>
 </svg>
